@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
-
 export default function Home() {
   return (
     <View style={styles.container}>

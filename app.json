@@ -24,7 +24,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": false,
+      "bundleIdentifier": "com.jdevelop.PanicHealthApp"
+    },
+    "android": {
+      "package": "com.jdevelop.PanicHealthApp"
+    },
+    "description": "Trabajo integrador Coderhouse curso ReactNative",
+    "githubUrl": "https://github.com/JDBONFOR/coderReactNative"
   }
 }
