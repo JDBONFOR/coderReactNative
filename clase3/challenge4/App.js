@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Tarjeta from './src/Tarjeta'
 
-export default App = () => {
+const App = () => {
 
     return (
       <View style={styles.container}>
@@ -26,6 +26,8 @@ export default App = () => {
     )
   
 }
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {

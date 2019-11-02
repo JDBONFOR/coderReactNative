@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native'
 
 //export default class Card extends Component
 
-export default Card = ({ nombre, apellido, style }) => {
+const Card = ({ nombre, apellido, style }) => {
   const [soloNombre, setState] = useState(false);
   const texto = soloNombre ? nombre : `${nombre} ${apellido}`
 
@@ -19,6 +19,8 @@ export default Card = ({ nombre, apellido, style }) => {
   )
   
 }
+
+export default Card;
 
 const styles = StyleSheet.create({
   container: {
@@ -50,6 +52,5 @@ const styles = StyleSheet.create({
   textoChico: {
     fontSize : 48
   }
-
 
 })
