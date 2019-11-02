@@ -27,7 +27,7 @@ export default function App() {
       />
 
       <Button
-        title = 'Ocultar'
+        title = { (!value) ? 'Ocultar' : 'Mostrar' }
         onPress = { () => { setHidden(!value) }}
       />
 
