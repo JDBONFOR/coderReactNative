@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View} from 'react-native';
+import { Button, StyleSheet, Text, View, FlatList} from 'react-native';
 import { ScrollView } from './node_modules/react-native-gesture-handler'
 import { authorize, getUserArtistsPromise } from './src/cliente-api-spotify'
 import ArtistaFavorito from './src/ArtistaFavorito'
@@ -26,17 +26,24 @@ export default function App() {
       .catch(e => { console.log(e) })
   }
   
-  console.log('artistas after setArtistas', artistas)
+  //console.log('artistas after setArtistas', artistas)
 
   return (
     <View style={styles.container}>
-        <ScrollView
+        {/* <ScrollView
           showsVerticalScrollIndicator={false}
           style={styles.scrollView}
           contentContainerStyle={styles.scrollViewContent}
         >
           { artistas && artistas.map(artist => <ArtistaFavorito artista={artist} key={artist.nombre} />)}
-        </ScrollView>
+        </ScrollView> */}
+
+        <FlatList
+          data = { artistas }
+          renderItem = {( artista ) => ( <ArtistaFavorito artista={artista.item} key={artista.nombre} /> )} 
+        >          
+        </FlatList>  
+
         <View style={styles.buttonsContainer}>
           <Button title="Login con Spotify" onPress={this._handleAuthButtonPress} />
           <Button disabled={!loggedIn} title="Ver favoritos" onPress={this._handleGetArtistsPress} />

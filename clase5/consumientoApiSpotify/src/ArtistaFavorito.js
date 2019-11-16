@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 const ArtistaFavorito = ({ artista }) => {
   const { nombre, imagen, seguidores } = artista
 
-  console.log(artista);
+  console.log('adentro del componente', artista);
 
   return (
     <View style={[styles.container, styles.conSombra]}>
